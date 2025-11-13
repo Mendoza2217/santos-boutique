@@ -1,25 +1,26 @@
-/* === COLORES VIVOS Y FEMENINOS === */
+/* === ESTILO FEMENINO MODERNO === */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #FFF0F6; /* rosa pastel */
-  color: #333333;
+  background-color: #fff7fa; /* fondo rosado muy claro */
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
 /* === ENCABEZADO === */
 header {
-  background: linear-gradient(90deg, #E91E63, #F06292);
+  background: linear-gradient(90deg, #e91e63, #ba68c8); /* rosa fucsia → lila */
   color: white;
-  padding: 20px 0;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 25px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  text-align: center;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 /* === MENÚ === */
@@ -29,41 +30,56 @@ nav ul {
   gap: 25px;
   list-style: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 12px 0;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #FFF0F6;
+  color: #ffebf0;
+}
+
+/* === SECCIONES === */
+section {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 /* === TARJETAS DE PRODUCTOS === */
 .producto {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(233,30,99,0.2);
+  box-shadow: 0 6px 20px rgba(186, 104, 200, 0.3);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .producto h3 {
-  color: #E91E63;
+  color: #e91e63;
+  margin-top: 15px;
 }
 
 .producto p {
-  color: #555555;
+  color: #555;
 }
 
 /* === BOTÓN DE COMPRA === */
@@ -71,22 +87,22 @@ nav a:hover {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #E91E63;
+  background-color: #ba68c8; /* lila pastel */
   color: white;
   text-decoration: none;
   border-radius: 25px;
   font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
 }
 
 .boton-compra:hover {
-  background-color: #F06292;
+  background-color: #e91e63;
   transform: scale(1.05);
 }
 
 /* === PIE DE PÁGINA === */
 footer {
-  background-color: #E91E63;
+  background-color: #e91e63;
   color: white;
   text-align: center;
   padding: 15px;
