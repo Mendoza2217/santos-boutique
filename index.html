@@ -1,108 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Santos Boutique | Accesorios de Dama</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santos Boutique</title>
+  <style>
+    /* === ESTILOS INCRUSTADOS === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9fb;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #222;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: 500;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f3f3f3;
+      color: #c49b63;
+    }
+
+    .hero {
+      background: url("images/hero.jpg") center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background-color: #222;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #c49b63;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b18a58;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .producto {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .producto h3 {
+      margin: 15px 0;
+      color: #222;
+    }
+
+    .producto p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Santos Boutique</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#sobre">Nosotros</a>
-      <a class="wa-contact" href="#">Contacto</a>
-    </nav>
-  </header>
 
-  <section id="inicio" aria-label="Inicio">
-    <h2>Brilla con Estilo</h2>
-    <p>Accesorios exclusivos para mujeres con elegancia y carácter</p>
-    <a href="#productos" class="btn">Ver Catálogo</a>
+  <header>Santos Boutique</header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Ofertas</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Estilo que inspira</h1>
+      <p>Descubre las últimas tendencias en moda femenina y complementos exclusivos.</p>
+      <button class="btn">Comprar ahora</button>
+    </div>
   </section>
 
-  <section id="productos" aria-label="Productos">
+  <section id="productos">
     <h2>Nuestros Productos</h2>
-    <div class="productos-grid">
+    <div class="productos">
       <div class="producto">
-        <img src="images/pulseras1.png" alt="Pulseras elegantes">
-        <div class="info">
-          <h3>Pulsera "Luz de Oro"</h3>
-          <p>Delicada con baño dorado</p>
-          <div class="actions">
-            <button class="action-btn btn-buy buy" data-product='Pulsera "Luz de Oro"'>💎 Realizar Pedido</button>
-            <a class="action-btn whatsapp wa-contact" href="#">WhatsApp</a>
-          </div>
-        </div>
+        <img src="images/vestido.jpg" alt="Vestido">
+        <h3>Vestido Elegante</h3>
+        <p>$120.000</p>
       </div>
-
       <div class="producto">
-        <img src="images/aretes1.png" alt="Aretes modernos">
-        <div class="info">
-          <h3>Aretes "Brisa"</h3>
-          <p>Diseño ligero y sofisticado</p>
-          <div class="actions">
-            <button class="action-btn btn-buy buy" data-product='Aretes "Brisa"'>💎 Realizar Pedido</button>
-            <a class="action-btn whatsapp wa-contact" href="#">WhatsApp</a>
-          </div>
-        </div>
+        <img src="images/blusa.jpg" alt="Blusa">
+        <h3>Blusa Moderna</h3>
+        <p>$85.000</p>
       </div>
-
       <div class="producto">
-        <img src="images/collares1.png" alt="Collares elegantes">
-        <div class="info">
-          <h3>Collar "Aurora"</h3>
-          <p>Elegancia que resalta tu esencia</p>
-          <div class="actions">
-            <button class="action-btn btn-buy buy" data-product='Collar "Aurora"'>💎 Realizar Pedido</button>
-            <a class="action-btn whatsapp wa-contact" href="#">WhatsApp</a>
-          </div>
-        </div>
+        <img src="images/accesorio.jpg" alt="Accesorio">
+        <h3>Accesorios</h3>
+        <p>$50.000</p>
       </div>
-
-      <div class="producto">
-        <img src="images/anillos1.png" alt="Anillos finos">
-        <div class="info">
-          <h3>Anillo "Sutileza"</h3>
-          <p>Acabado premium y cómodo</p>
-          <div class="actions">
-            <button class="action-btn btn-buy buy" data-product='Anillo "Sutileza"'>💎 Realizar Pedido</button>
-            <a class="action-btn whatsapp wa-contact" href="#">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="sobre" aria-label="Sobre Nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>En <strong>Santos Boutique</strong> redefinimos la elegancia con accesorios de calidad premium. Nuestros productos están diseñados para realzar la belleza natural de cada mujer con un toque moderno, sofisticado y atemporal.</p>
-  </section>
-
-  <section id="testimonios" aria-label="Testimonios">
-    <h2>Opiniones de Nuestras Clientas</h2>
-    <div class="testimonios-grid">
-      <div class="testimonio">“Las pulseras son preciosas, llegaron rápido y con una presentación impecable.” <span>- Laura Mora</span></div>
-      <div class="testimonio">“Compré unos aretes para un regalo y fueron un éxito. Elegancia total.” <span>- Carolina Guerrero</span></div>
-      <div class="testimonio">“Excelente servicio y materiales de alta calidad. ¡Amé mi collar!” <span>- Daniela Perez</span></div>
-    </div>
-  </section>
-
-  <section id="contacto" aria-label="Contacto">
-    <h2>Contáctanos</h2>
-    <p>Escríbenos por WhatsApp para realizar tu pedido directamente.</p>
-    <div style="margin-top:18px">
-      <a class="btn" href="https://wa.me/573146221584" target="_blank">Abrir WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    © 2025 Santos Boutique · Estilo y Elegancia en Cada Detalle
+    © 2025 Santos Boutique. Todos los derechos reservados.
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
