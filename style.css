@@ -1,28 +1,200 @@
-/* style.css - Santos Boutique (premium palette) */
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
-body{background:#f7f7f7;color:#222}
-header{background:linear-gradient(90deg,#fefefe,#e9e4e6);padding:18px 40px;display:flex;justify-content:space-between;align-items:center;position:fixed;width:100%;top:0;z-index:100;box-shadow:0 3px 10px rgba(0,0,0,0.08);backdrop-filter:blur(6px)}
-header h1{font-size:1.8em;font-weight:800;color:#111;letter-spacing:1.2px;text-transform:uppercase}
-nav a{color:#333;margin-left:28px;text-decoration:none;font-weight:600;font-size:1em;position:relative}
-nav a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:#d4a6b8;transition:width .25s}
-nav a:hover::after{width:100%}
-section{padding:110px 40px;text-align:center}
-#inicio{background:url('images/pulseras1.png') center/cover no-repeat;height:84vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-shadow:2px 2px 8px rgba(0,0,0,0.5)}
-#inicio h2{font-size:3.2em;font-weight:800;letter-spacing:1px;margin-bottom:12px}
-#inicio p{font-size:1.2em;margin-bottom:22px;opacity:.95}
-.btn{background:linear-gradient(145deg,#fff,#e6d7dd);color:#111;padding:12px 36px;border-radius:28px;font-weight:800;border:none;box-shadow:0 3px 10px rgba(0,0,0,0.12);cursor:pointer;text-decoration:none}
-.btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.16)}
-#productos{background:#faf7f8;padding-top:80px}
-#productos h2{font-size:2.2em;font-weight:800;margin-bottom:22px;color:#111;letter-spacing:.6px}
-.productos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;max-width:1100px;margin:0 auto}
-.producto{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.06);transition:transform .28s,box-shadow .28s;cursor:pointer}
-.producto img{width:100%;height:260px;object-fit:cover;display:block}
-.producto .info{padding:16px}
-.producto h3{font-size:1.1em;margin-bottom:6px;color:#111;font-weight:800}
-.producto p{color:#6b5b60;font-weight:600;font-size:.95em}
-.actions{display:flex;gap:12px;justify-content:center;margin-top:18px}
-.action-btn{padding:10px 18px;border-radius:20px;border:none;cursor:pointer;font-weight:700}
-.buy{background:linear-gradient(90deg,#d9a6b3,#f3dde2);color:#111}
-.whatsapp{background:#25D366;color:#fff}
-footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:28px;font-weight:700}
-@media(max-width:880px){#inicio h2{font-size:2.2em}section{padding:100px 18px}}
+/* Fuente moderna y elegante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ======== GENERAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff5f8;
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== CABECERA ======== */
+header {
+  background: linear-gradient(90deg, #ff4b8b, #ff82b2);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffe3f1;
+}
+
+/* ======== SECCIONES ======== */
+section {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  color: #ff3e80;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ======== BOTONES ======== */
+.btn {
+  display: inline-block;
+  background: #ff4b8b;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #ff2d73;
+  transform: scale(1.05);
+}
+
+/* ======== PRODUCTOS ======== */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.producto {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.producto .info {
+  padding: 1rem;
+}
+
+.producto h3 {
+  color: #ff3e80;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  color: #555;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-buy {
+  background: #ff6fa5;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.btn-buy:hover {
+  background: #ff3e80;
+}
+
+.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp:hover {
+  background: #1ebe5c;
+}
+
+/* ======== TESTIMONIOS ======== */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.testimonio {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.testimonio span {
+  display: block;
+  margin-top: 8px;
+  color: #ff4b8b;
+  font-weight: 600;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #ff4b8b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
