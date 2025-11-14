@@ -1,134 +1,200 @@
-/* ===== ESTILOS GENERALES ===== */
+/* Fuente moderna y elegante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+ 
+/* ======== GENERAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+ 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: white;
-  color: #444;
+  background: #fff5f8;
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
 }
-
-/* ===== HEADER ===== */
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+/* ======== CABECERA ======== */
 header {
-  background: white;
-  border-bottom: 3px solid #C9A74D;
-  padding: 18px 30px;
+  background: linear-gradient(90deg, #ff4b8b, #ff82b2);
+  color: white;
   text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
-
+ 
 header h1 {
-  margin: 0;
-  color: #C9A74D;
-  font-weight: bold;
-  font-size: 28px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
-
+ 
 nav {
   margin-top: 10px;
 }
-
+ 
 nav a {
-  margin: 0 12px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  color: #444;
+  margin: 0 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-
+ 
 nav a:hover {
-  color: #C9A74D;
+  color: #ffe3f1;
 }
-
-/* ===== SECCIÓN HERO ===== */
-#inicio {
-  padding: 80px 20px;
+ 
+/* ======== SECCIONES ======== */
+section {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: auto;
   text-align: center;
-  background: white;
 }
-
-#inicio h2 {
-  font-size: 40px;
-  color: #C9A74D;
+ 
+section h2 {
+  color: #ff3e80;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
 }
-
+ 
+section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+ 
+/* ======== BOTONES ======== */
 .btn {
-  padding: 12px 28px;
-  background: #C9A74D;
-  color: white;
+  display: inline-block;
+  background: #ff4b8b;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  margin-top: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
 }
-
+ 
 .btn:hover {
-  background: #b8963d;
+  background: #ff2d73;
+  transform: scale(1.05);
 }
-
-/* ===== PRODUCTOS ===== */
-#productos {
-  padding: 40px 20px;
-  text-align: center;
-}
-
+ 
+/* ======== PRODUCTOS ======== */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-
+ 
 .producto {
-  background: #F2F2F2;
-  border: 2px solid #C9A74D;
-  border-radius: 10px;
-  padding: 15px;
-  transition: 0.3s;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-
+ 
 .producto:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
-
+ 
 .producto img {
   width: 100%;
-  border-radius: 10px;
+  height: 220px;
+  object-fit: cover;
 }
-
-.info h3 {
-  color: #C9A74D;
+ 
+.producto .info {
+  padding: 1rem;
 }
-
+ 
+.producto h3 {
+  color: #ff3e80;
+  margin-bottom: 0.5rem;
+}
+ 
+.producto p {
+  color: #555;
+}
+ 
 .actions {
-  margin-top: 10px;
+  margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-
+ 
 .action-btn {
-  padding: 8px 10px;
-  background: #C9A74D;
-  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 14px;
+  font-weight: 500;
 }
-
-.action-btn:hover {
-  background: #b8963d;
+ 
+.btn-buy {
+  background: #ff6fa5;
+  color: #fff;
+  transition: background 0.3s ease;
 }
-
-/* ===== SECCIONES ===== */
-section {
-  padding: 50px 25px;
-  text-align: center;
+ 
+.btn-buy:hover {
+  background: #ff3e80;
 }
-
-#sobre {
-  background: white;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #444;
+ 
+.whatsapp {
+  background: #25d366;
   color: white;
-  padding: 20px;
+}
+ 
+.whatsapp:hover {
+  background: #1ebe5c;
+}
+ 
+/* ======== TESTIMONIOS ======== */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+ 
+.testimonio {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+ 
+.testimonio span {
+  display: block;
+  margin-top: 8px;
+  color: #ff4b8b;
+  font-weight: 600;
+}
+ 
+/* ======== FOOTER ======== */
+footer {
+  background: #ff4b8b;
+  color: white;
   text-align: center;
-  border-top: 3px solid #C9A74D;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
 }
