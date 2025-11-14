@@ -1,200 +1,140 @@
-/* Fuente moderna y elegante */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* ======== GENERAL ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: #fff5f8;
+  background-color: #fafafa;
   color: #333;
-  line-height: 1.6;
-  animation: fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ======== CABECERA ======== */
+/* =====================
+    HEADER
+===================== */
 header {
-  background: linear-gradient(90deg, #ff4b8b, #ff82b2);
+  background-color: #111;
   color: white;
   text-align: center;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  padding: 25px 0 10px 0;
+  border-bottom: 3px solid #d4af37; /* Borde dorado */
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
+/* =====================
+    NAV
+===================== */
 nav {
-  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  border-bottom: 2px solid #d4af37; /* Dorado */
+  border-top: 2px solid #d4af37; /* Dorado */
+  position: sticky;
+  top: 0;
+  z-index: 900;
 }
 
 nav a {
-  color: #fff;
   text-decoration: none;
-  margin: 0 14px;
+  color: #000;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ffe3f1;
+  color: #d4af37;
 }
 
-/* ======== SECCIONES ======== */
-section {
-  padding: 3rem 1rem;
-  max-width: 1100px;
-  margin: auto;
+/* =====================
+    HERO SECTION
+===================== */
+.hero {
+  padding: 100px 20px;
   text-align: center;
 }
 
-section h2 {
-  color: #ff3e80;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+.hero h2 {
+  font-size: 40px;
 }
 
-section p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: #555;
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
-/* ======== BOTONES ======== */
-.btn {
-  display: inline-block;
-  background: #ff4b8b;
-  color: #fff;
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 1.2rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
+/* =====================
+    PRODUCTOS
+===================== */
+#productos {
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.btn:hover {
-  background: #ff2d73;
-  transform: scale(1.05);
-}
-
-/* ======== PRODUCTOS ======== */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
 .producto {
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #d4af37; /* borde dorado */
+  transition: 0.3s;
 }
 
 .producto:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
 .producto img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.producto .info {
-  padding: 1rem;
+  border-radius: 10px;
 }
 
 .producto h3 {
-  color: #ff3e80;
-  margin-bottom: 0.5rem;
+  margin: 10px 0 5px 0;
 }
 
-.producto p {
-  color: #555;
-}
-
-.actions {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.action-btn {
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #d4af37;
+  color: #111;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.btn-buy {
-  background: #ff6fa5;
-  color: #fff;
-  transition: background 0.3s ease;
+.btn:hover {
+  background-color: #b9972c;
 }
 
-.btn-buy:hover {
-  background: #ff3e80;
+/* =====================
+    CONTACTO
+===================== */
+#contacto {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.whatsapp {
-  background: #25d366;
-  color: white;
-}
-
-.whatsapp:hover {
-  background: #1ebe5c;
-}
-
-/* ======== TESTIMONIOS ======== */
-.testimonios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.testimonio {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-style: italic;
-}
-
-.testimonio span {
-  display: block;
-  margin-top: 8px;
-  color: #ff4b8b;
-  font-weight: 600;
-}
-
-/* ======== FOOTER ======== */
+/* =====================
+    FOOTER
+===================== */
 footer {
-  background: #ff4b8b;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 3rem;
+  padding: 25px 0;
+  margin-top: 40px;
+  border-top: 3px solid #d4af37; /* borde dorado */
 }
