@@ -1,97 +1,67 @@
-/* =============================
-      ESTILO GENERAL
-============================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* ===== ESTILOS GENERALES ===== */
 body {
-  background-color: #ffffff;  /* Blanco */
-  color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #444;
 }
 
-/* =============================
-      HEADER
-============================= */
+/* ===== HEADER ===== */
 header {
-  background-color: #ffffff;
-  color: #333;
+  background: white;
+  border-bottom: 3px solid #C9A74D;
+  padding: 18px 30px;
   text-align: center;
-  padding: 25px 0 10px 0;
-  border-bottom: 3px solid #d4af37; /* Dorado elegante */
 }
 
-/* =============================
-      NAV
-============================= */
+header h1 {
+  margin: 0;
+  color: #C9A74D;
+  font-weight: bold;
+  font-size: 28px;
+}
+
 nav {
-  background-color: #f5f5f5; /* Gris claro */
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  border-bottom: 2px solid #d4af37; /* Dorado */
-  border-top: 2px solid #d4af37; /* Dorado */
-  position: sticky;
-  top: 0;
-  z-index: 900;
+  margin-top: 10px;
 }
 
 nav a {
+  margin: 0 12px;
   text-decoration: none;
-  color: #6b6b6b; /* Gris */
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: bold;
+  color: #444;
 }
 
 nav a:hover {
-  color: #d4af37; /* Dorado */
+  color: #C9A74D;
 }
 
-/* =============================
-      HERO
-============================= */
-.hero {
-  padding: 100px 20px;
+/* ===== SECCIÓN HERO ===== */
+#inicio {
+  padding: 80px 20px;
   text-align: center;
+  background: white;
 }
 
-.hero h2 {
+#inicio h2 {
   font-size: 40px;
-  color: #333;
+  color: #C9A74D;
 }
 
-.hero p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #6b6b6b;
-}
-
-/* =============================
-      BOTONES
-============================= */
 .btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 18px;
-  background-color: #d4af37; /* Dorado */
-  color: #fff;
-  font-weight: bold;
+  padding: 12px 28px;
+  background: #C9A74D;
+  color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: 0.3s;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background-color: #b9972c; /* Dorado oscuro */
+  background: #b8963d;
 }
 
-/* =============================
-      PRODUCTOS
-============================= */
+/* ===== PRODUCTOS ===== */
 #productos {
   padding: 40px 20px;
   text-align: center;
@@ -99,23 +69,21 @@ nav a:hover {
 
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
 
 .producto {
-  background: #ffffff;
-  padding: 18px;
+  background: #F2F2F2;
+  border: 2px solid #C9A74D;
   border-radius: 10px;
-  text-align: center;
-  border: 2px solid #d4af37; /* borde dorado */
+  padding: 15px;
   transition: 0.3s;
 }
 
 .producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+  transform: scale(1.03);
 }
 
 .producto img {
@@ -123,26 +91,44 @@ nav a:hover {
   border-radius: 10px;
 }
 
-.producto p {
-  color: #6b6b6b;
+.info h3 {
+  color: #C9A74D;
 }
 
-/* =============================
-      CONTACTO
-============================= */
-#contacto {
-  padding: 50px 20px;
+.actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-btn {
+  padding: 8px 10px;
+  background: #C9A74D;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  background: #b8963d;
+}
+
+/* ===== SECCIONES ===== */
+section {
+  padding: 50px 25px;
   text-align: center;
 }
 
-/* =============================
-      FOOTER
-============================= */
+#sobre {
+  background: white;
+}
+
+/* ===== FOOTER ===== */
 footer {
-  background: #f5f5f5; /* Gris claro */
-  color: #333;
+  background: #444;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 25px 0;
-  margin-top: 40px;
-  border-top: 3px solid #d4af37; /* Dorado */
+  border-top: 3px solid #C9A74D;
 }
