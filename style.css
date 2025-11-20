@@ -54,3 +54,24 @@
   display: block;           /* Quita espacios extra */
   border-bottom: 3px solid #C9A33F; /* Línea dorada */
 }
+/* Ajuste del contenedor del producto */
+.producto {
+  width: 100%;
+  max-width: 350px;      /* ancho uniforme */
+  margin: auto;
+  border: 3px solid #d4af37;
+  border-radius: 12px;
+  overflow: hidden;      /* IMPORTANTE: evita que la imagen se salga */
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ajuste de las imágenes */
+.producto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;        /* mantiene proporciones sin deformar */
+  object-position: center;  /* centra la imagen */
+  display: block;
+}
+
