@@ -1,19 +1,16 @@
-/* Contenedor del producto */
-.producto {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;                    /* evita que la imagen se salga */
-  border: 4px solid #C9A33F;           /* borde dorado */
-  transition: transform 0.3s;
+.btn.pago {
+    background-color: #C9A33F; /* dorado como tu branding */
+    color: #222;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 10px;
 }
- 
-/* Imagen del producto */
-.producto img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;                   /* recorta sin deformar */
-  object-position: center;             /* centra la imagen */
-  display: block;
-  border-bottom: 3px solid #C9A33F;    /* línea dorada */
+
+.btn.pago:hover {
+    background-color: #b18a58; /* tono más oscuro al pasar el mouse */
 }
