@@ -132,24 +132,20 @@
  
     /* CONTENEDOR OBLIGATORIO PARA IMAGEN */
     .img-container {
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-    }
- 
-    .img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      border-bottom: 3px solid #C9A33F;
-    }
- 
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Ajusta sin deformar */
+  object-position: center;
+}
     .producto h3 { margin: 15px 0; color: #222; }
     .producto p { color: #555; margin-bottom: 15px; }
  
